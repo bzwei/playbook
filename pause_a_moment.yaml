@@ -1,0 +1,6 @@
+- hosts: all
+  gather_facts: no
+
+  tasks:      
+    - name: sleep a few seconds
+      command: sleep {{ seconds }}
