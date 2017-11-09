@@ -3,13 +3,13 @@
   tasks:
     - name: Deploy an instance
       os_server:
-      state: present
-      name: webserver
-      image: centos-70-x86_64-genericcloud
-      key_name: root
-      wait: yes
-      flavor: m1.small
-      auto_floating_ip: yes
-      network: private
-      meta:
-        hostname: webserver.localdomain
+        state: present
+        name: webserver
+        image: centos-70-x86_64-genericcloud
+        key_name: root
+        wait: yes
+        flavor: m1.small
+        auto_floating_ip: yes
+        network: private
+        meta:
+          hostname: webserver.localdomain
