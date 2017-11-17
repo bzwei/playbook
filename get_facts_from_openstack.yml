@@ -4,10 +4,10 @@
   vars:
   tasks:
   # Gather facts about all servers named C<web*>:
-  - os_server_facts:
-      timeout: 60
-    environment:
+  - environment:
       OS_IDENTITY_API_VERSION: 3
+    os_server_facts:
+      timeout: 60
     register: myfacts
   - debug:
       var: myfacts
