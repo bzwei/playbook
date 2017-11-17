@@ -1,0 +1,13 @@
+
+- name: Collect facts from Openstack instances
+  hosts: all
+  vars:
+  tasks:
+  # Gather facts about all servers named C<web*>:
+  - os_server_facts:
+      timeout: 60
+    environment:
+      OS_IDENTITY_API_VERSION: 3
+    register: myfacts
+  - debug:
+      var: myfacts
