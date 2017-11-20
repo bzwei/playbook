@@ -5,7 +5,12 @@
   tasks:
   # Gather facts about all servers named C<web*>:
   - environment:
-      OS_IDENTITY_API_VERSION: 3
+      OS_USERNAME: admin
+      OS_PASSWORD: dog8code
+      OS_AUTH_URL: http://10.8.196.59:5000/v3
+      OS_PROJECT_NAME: admin
+      OS_USER_DOMAIN_NAME: Default
+      OS_PROJECT_DOMAIN_NAME: Default
     os_server_facts:
       timeout: 60
     register: myfacts
